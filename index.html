@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Privacy in Health Apps</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="static/css/AdminLTE.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="static/css/custom.css">
+    <!-- AdminLTE Skins -->
+    <link rel="stylesheet" href="static/css/skin-black.min.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="static/css/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="static/css/jquery-jvectormap.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="static/css/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="static/css/bootstrap3-wysihtml5.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="static/css/dataTables.bootstrap.min.css">
+
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    
+
+
+</head>
+
+<body class="hold-transition skin-black sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="index.html#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                  </a>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hosts.html">
+                            <i class="fa fa-server"></i> <span>Hosts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="apps-vs-sources.html">
+                            <i class="fa fa-th"></i> <span>Sources of Information</span>
+                        </a>
+                    </li>
+                    <!-- <li> -->
+                        <!-- <a href="/stats"> -->
+                            <!-- <i class="fa fa-pie-chart"></i> <span>Statistics</span> -->
+                        <!-- </a> -->
+                    <!-- </li> -->
+                    <li>
+                        <a href="about.html">
+                            <i class="fa fa-question-circle"></i> <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+        
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Results of our study into privacy leaks in health apps</h1>
+        <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+            <!-- <li class="active">Dashboard</li> -->
+        </ol>
+    </section>
+
+    <section class="content">
+
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <a href="about.html#dataset">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3>25</h3>
+                            <p>Apps Analyzed</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-orange">
+                    <div class="inner">
+                        <h3>100<sup style="font-size: 20px">%</sup></h3>
+                        <p>Apps presented privacy issues</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <a href="apps-vs-sources.html" class="small-box-footer">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3>21</h3>
+                            <p>Different sources of information leaked over the Internet</p>
+                        </div>
+                        <div class="icon">
+                            <!-- <i class="ion ion-person-add"></i> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3>4</h3>
+                        <p>Apps leaked data in cleartext</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Results Overview</h3>
+                    </div>
+
+                    <div class="box-body table-responsive">
+                        <table id="results-overview" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>App</th>
+                                    <th class="text-center">
+                                        <span title="App sends any sensitive information over the network">
+                                            Info Leaks
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="App sends credentials without any encryption">
+                                            Insecure Login
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="Pinning means an additional layer of security on top of HTTPS, further ensuring authenticity of the destination">
+                                            Certificate Pinning
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="App sends any sensitive information without any encryption">
+                                            Cleartext Leaks
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="Addition layer of security: data is encrypted locally before sent over the network. This means not even the destination server can access the data.">
+                                            E2E Encryption
+                                        </span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.studypadinc.splashmath.universal.omni.lite.html">
+                                                &#34;SplashLearn: Kids Learning App&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.bakemorecakemaker.petvetdogs.html">
+                                                &#34;Dog Games: Pet Vet Doctor Care&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/girls.makeup.dressup.games.html">
+                                                &#34;Girl Games Dress Up &amp; Make Up&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/org.khanacademy.Khan-Kids.html">
+                                                &#34;Khan Academy Kids&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.rvappstudios.abc-kids-toddler-tracing-phonics.html">
+                                                &#34;ABC Kids - Tracing &amp; Phonics&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.wheremychildren.ios.html">
+                                                &#34;Find My Kids: Parental control&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.22learn.BasicSkillsNumbersFree.html">
+                                                &#34;Toddler Learning Games&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/art.sandbox.app.html">
+                                                &#34;Sandbox - Pixel Art Colouring&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/wedding.games.html">
+                                                &#34;Makeup Games: Wedding Artist&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.shakeitmediainc.unicorn.slime.girl.games.for.free.html">
+                                                &#34;Girl Games: Unicorn Slime&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.amazon.freetime.FreeTime.html">
+                                                &#34;Amazon Kids+&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.frismos.dogworld.html">
+                                                &#34;Dog Town: Fun Animal Games Zoo&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.mattel.hwid.html">
+                                                &#34;Hot WheelsÂ® id&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/star.amazing.run.html">
+                                                &#34;STAR: Super Twisted Arena Run&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.idzdigital.pretend.play.monster.town.airport.html">
+                                                &#34;Tizi Town â€“ My Airplane Games&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.kidslox.main.html">
+                                                &#34;Parental Control App - Kidslox&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.tinybeans.mobile.iphone.html">
+                                                &#34;Tinybeans Family Album&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.ourfamilywizard.ofwapp.html">
+                                                &#34;OurFamilyWizard Co-Parent App&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.justalk.kids.ios.html">
+                                                &#34;JusTalk Kids - Safe Video Chat&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.google.FamilyLink.html">
+                                                &#34;Google Family Link&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.huckleberry-labs.app.html">
+                                                &#34;Huckleberry: Baby &amp; Child&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.babysparks.babysparks.html">
+                                                &#34;BabySparks - Development App&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/org.blubblub.app.speechblubs.html">
+                                                &#34;Speech Blubs: Language Therapy&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.childhealthdocs.mobile.html">
+                                                &#34;Child Health Docs&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            <a href="app/com.mindcandy.sleepstories.html">
+                                                &#34;Moshi Kids: Sleep &amp; Meditation&#34;
+                                            </a>
+                                        </td>
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> Yes</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-green text-center">
+                                                <span><i class="fa fa-thumbs-o-up"></i> No</span>
+                                            </td>
+                                        
+
+                                        
+                                            <td class="bg-red text-center">
+                                                <span><i class="fa fa-thumbs-o-down"></i> No</span>
+                                            </td>
+                                        
+                                    </tr>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>App</th>
+                                    <th class="text-center">
+                                        <span title="App sends any sensitive information over the network">
+                                            Info Leaks
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="App sends credentials without any encryption">
+                                            Insecure Login
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="Pinning means an additional layer of security on top of HTTPS, further ensuring authenticity of the destination">
+                                            Certificate Pinning
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="App sends any sensitive information without any encryption">
+                                            Cleartext Leaks
+                                        </span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span title="Addition layer of security: data is encrypted locally before sent over the network. This means not even the destination server can access the data.">
+                                            E2E Encryption
+                                        </span>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2018 University of Sydney.</strong> All rights
+            reserved.
+        </footer>
+    </div>
+ 
+    <!-- jQuery 3 -->
+    <script src="static/js/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="static/js/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- Morris.js charts -->
+    <script src="static/js/raphael.min.js"></script>
+    <script src="static/js/morris.min.js"></script>
+    <!-- Sparkline -->
+    <script src="static/js/jquery.sparkline.min.js"></script>
+    <!-- jvectormap -->
+    <script src="static/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="static/js/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="static/js/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="static/js/moment.min.js"></script>
+    <script src="static/js/daterangepicker.js"></script>
+    <!-- datepicker -->
+    <script src="static/js/bootstrap-datepicker.min.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="static/js/bootstrap3-wysihtml5.all.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="static/js/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="static/js/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="static/js/adminlte.min.js"></script>
+    <!-- DataTables -->
+    <script src="static/js/jquery.dataTables.min.js"></script>
+    <script src="static/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <!-- <script src="/static/js/dashboard.js"></script> -->
+    <!-- AdminLTE for demo purposes -->
+    <!-- <script src="/static/js/demo.js"></script> -->
+
+    
+
+    <script src="static/js/export/jquery-1.12.4.js"></script>
+    <script src="static/js/export/jquery.dataTables.min.js"></script>
+    <script src="static/js/export/dataTables.buttons.min.js"></script>
+    <script src="static/js/export/buttons.flash.min.js"></script>
+    <script src="static/js/export/jszip.min.js"></script>
+    <script src="static/js/export/pdfmake.min.js"></script>
+    <script src="static/js/export/vfs_fonts.js"></script>
+    <script src="static/js/export/buttons.html5.min.js"></script>
+    <script src="static/js/export/buttons.print.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#results-overview').DataTable({
+                'paging'      : false,
+                'lengthChange': false,
+                'searching'   : true,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'print',
+                    {
+                        extend: 'csv',
+                        title: 'results-overview'
+                    },
+                    {
+                        extend: 'pdf',
+                        title: 'results-overview'
+                    }
+                ]
+            })
+        });
+
+    </script>
+
+
+
+</body>
+</html>

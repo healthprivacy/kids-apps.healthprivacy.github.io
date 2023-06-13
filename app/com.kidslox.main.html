@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Privacy in Health Apps</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../static/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/css/AdminLTE.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="../static/css/custom.css">
+    <!-- AdminLTE Skins -->
+    <link rel="stylesheet" href="../static/css/skin-black.min.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="../static/css/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="../static/css/jquery-jvectormap.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../static/css/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="../static/css/bootstrap3-wysihtml5.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../static/css/dataTables.bootstrap.min.css">
+
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    
+
+
+</head>
+
+<body class="hold-transition skin-black sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="com.kidslox.main.html#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                  </a>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li>
+                        <a href="../index.html">
+                            <i class="fa fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../hosts.html">
+                            <i class="fa fa-server"></i> <span>Hosts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../apps-vs-sources.html">
+                            <i class="fa fa-th"></i> <span>Sources of Information</span>
+                        </a>
+                    </li>
+                    <!-- <li> -->
+                        <!-- <a href="/stats"> -->
+                            <!-- <i class="fa fa-pie-chart"></i> <span>Statistics</span> -->
+                        <!-- </a> -->
+                    <!-- </li> -->
+                    <li>
+                        <a href="../about.html">
+                            <i class="fa fa-question-circle"></i> <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+        
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1><i class="fa fa-mobile"></i> &#34;Parental Control App - Kidslox&#34;</h1>
+    </section>
+
+    <section class="content">
+
+            <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-solid">
+                    
+
+                    
+
+
+                    <div class="box-header with-border">
+                        <h2 class="box-title">General</h2>
+                    </div>
+
+                    <dl class="dl-horizontal">
+                        <dt>Package Name</dt>
+                        <dd>com.kidslox.main</dd>
+
+                        <dt>
+                            <span title="App sends credentials without any encryption">
+                                Insecure Login
+                            </span>
+                        </dt>
+                        <dd>
+                            
+                                <span class="fa-stack">
+                                    <i class="fa fa-circle fa-stack-2x text-green"></i>
+                                    <i class="fa fa-thumbs-o-up fa-stack-1x fa-inverse"></i>
+                                </span> No
+                            
+                        </dd>
+
+                        <dt>
+                            <span title="Pinning means an additional layer of security on top of HTTPS, further ensuring authenticity of the destination">
+                                Certificate Pinning
+                            </span>
+                        </dt>
+                        <dd>
+                            
+                                <span class="fa-stack">
+                                    <i class="fa fa-circle fa-stack-2x text-red"></i>
+                                    <i class="fa fa-thumbs-o-down fa-stack-1x fa-inverse"></i>
+                                </span> No
+                            
+                        </dd>
+
+                        <dt>
+                            <span title="Addition layer of security: data is encrypted locally before sent over the network. This means not even the destination server can access the data">
+                                End to End Encryption
+                            </span>
+                        </dt>
+                        <dd>
+                            
+                                <span class="fa-stack">
+                                    <i class="fa fa-circle fa-stack-2x text-red"></i>
+                                    <i class="fa fa-thumbs-o-down fa-stack-1x fa-inverse"></i>
+                                </span> No
+                            
+                        </dd>
+                    </dl>
+
+                    <div class="box-body table-responsive">
+                        <div class="box-header with-border">
+                            <h2 class="box-title">Leaks</h2>
+                        </div>
+                        <table id="leaks" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sources</th>
+                                    <th class="text-center">IP Address</th>
+                                    <th class="text-center">Domain</th>
+                                    <th class="text-center">Schemes</th>
+                                    <th class="text-center">Cipher Suites</th>
+                                    <th class="text-center">Organization</th>
+                                    <th class="text-center">Domain Organization</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:802::200a</td>
+
+                                        <td class="text-center">device-provisioning.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2.19.194.234</td>
+
+                                        <td class="text-center">sdk-api-v1.singular.net</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Akamai Technologies</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:803::200a</td>
+
+                                        <td class="text-center">firebaseinstallations.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:810::200a</td>
+
+                                        <td class="text-center">firebasedynamiclinks.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:803::200a</td>
+
+                                        <td class="text-center">firebaselogging-pa.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:800::200a</td>
+
+                                        <td class="text-center">fcmtoken.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:811::200a</td>
+
+                                        <td class="text-center">firebaseremoteconfig.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2.19.194.234</td>
+
+                                        <td class="text-center">sdk-api-v1-singular.net</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Akamai Technologies</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:80c::200e</td>
+
+                                        <td class="text-center">app-measurement.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-id <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">54.203.33.41</td>
+
+                                        <td class="text-center">api2.amplitude.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Amazon.com, Inc.</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">34.120.115.37</td>
+
+                                        <td class="text-center">admin.kdlparentalcontrol.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Google LLC</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">104.16.53.111</td>
+
+                                        <td class="text-center">kidsloxsupport.zendesk.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Cloudflare, Inc.</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">151.101.36.217</td>
+
+                                        <td class="text-center">player.vimeo.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Fastly, Inc.</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">151.101.38.109</td>
+
+                                        <td class="text-center">skyfire.vimeocdn.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Fastly</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:80c::200e</td>
+
+                                        <td class="text-center">www.google-analytics.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2606:4700::6811:ba58</td>
+
+                                        <td class="text-center">kidslox.report-uri.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                e-mail <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">34.120.115.37</td>
+
+                                        <td class="text-center">admin.kdlparentalcontrol.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Google LLC</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:389::2903</td>
+
+                                        <td class="text-center">configuration.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:801::2010</td>
+
+                                        <td class="text-center">storage.googleapis.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2001:888:2000:3d::525e:ea62</td>
+
+                                        <td class="text-center">gspe79-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-id <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.248.176.38</td>
+
+                                        <td class="text-center">p65-fmf.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2001:888:2000:3d::525e:ea5a</td>
+
+                                        <td class="text-center">132vod-adaptive.akamaized.net</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">52.218.120.74</td>
+
+                                        <td class="text-center">kidslox-data.s3-eu-west-1.amazonaws.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Amazon Technologies Inc.</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a41:e06::c</td>
+
+                                        <td class="text-center">p65-acsegateway.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2620:1ec:c11::200</td>
+
+                                        <td class="text-center">www.bing.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a10:f100::2</td>
+
+                                        <td class="text-center">pancake.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">20.190.160.2</td>
+
+                                        <td class="text-center">login.microsoftonline.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:80e::200e</td>
+
+                                        <td class="text-center">clients1.google.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">18.156.205.85</td>
+
+                                        <td class="text-center">api-glb-euc1a.smoot.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">A100 ROW GmbH</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:801::2004</td>
+
+                                        <td class="text-center">www.google.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:801::2001</td>
+
+                                        <td class="text-center">lh3.googleusercontent.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:801::2003</td>
+
+                                        <td class="text-center">id.google.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a02:f000::9</td>
+
+                                        <td class="text-center">gsp-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:803::2003</td>
+
+                                        <td class="text-center">www.gstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:803::2001</td>
+
+                                        <td class="text-center">cdn.ampproject.org</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:802:2002</td>
+
+                                        <td class="text-center">adservice.google.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:80d::2002</td>
+
+                                        <td class="text-center">adservice.google.nl</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:810::2002</td>
+
+                                        <td class="text-center">googleads.g.doubleclick.net</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">172.217.168.226</td>
+
+                                        <td class="text-center">googleadservices.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Google LLC</td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:803::2013</td>
+
+                                        <td class="text-center">activity.kdlparentalcontrol.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">92.122.94.97</td>
+
+                                        <td class="text-center">init-p01md.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                http
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                        </td>
+
+                                        <td class="text-center">Akamai Technologies</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:3a8::2a1</td>
+
+                                        <td class="text-center">init.itunes.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:3a8::1b4b</td>
+
+                                        <td class="text-center">gspe35-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">82.94.234.97</td>
+
+                                        <td class="text-center">init.ess.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Xs4all Internet BV</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">82.94.234.74</td>
+
+                                        <td class="text-center">pds-init.ess.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Akamai</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.57.163.28</td>
+
+                                        <td class="text-center">gsp85-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.253.53.203</td>
+
+                                        <td class="text-center">iosapps.itunes.appel.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Domains By Proxy, LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.56.48.13</td>
+
+                                        <td class="text-center">weather-edge.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:390::12c5</td>
+
+                                        <td class="text-center">cf.iadsdk.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:390::12c5</td>
+
+                                        <td class="text-center">iadsk.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">54.195.83.61</td>
+
+                                        <td class="text-center">fbs.smoot.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Amazon.com, Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">199.192.16.212</td>
+
+                                        <td class="text-center">gcxevent.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Namecheap, Inc.</td>
+
+                                        <td class="text-center">Domains By Proxy, LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:803::200e</td>
+
+                                        <td class="text-center">encrypted-tbn3.gstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:80d::200e</td>
+
+                                        <td class="text-center">play.google.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Google LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a41:e03::f</td>
+
+                                        <td class="text-center">caldav.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:400e:80f::2003</td>
+
+                                        <td class="text-center">firebase-settings.crashlytics.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00::213:c213</td>
+
+                                        <td class="text-center">inappcheck.itunes.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">20aa:1450:400e:802::200d</td>
+
+                                        <td class="text-center">accounts.youtube.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">54.240.168.22</td>
+
+                                        <td class="text-center">kidslox.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">A100 US LLC</td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a00:1450:4025:402::9d</td>
+
+                                        <td class="text-center">stats.g.doubleclick.net</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a02:f100::10</td>
+
+                                        <td class="text-center">gsp-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.252.244.19</td>
+
+                                        <td class="text-center">gsp57-ssl-locus.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:381::2a1</td>
+
+                                        <td class="text-center">init.itunes.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.167.200.72</td>
+
+                                        <td class="text-center">gsp64-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:389::2903</td>
+
+                                        <td class="text-center">gspe19-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">18.156.205.85</td>
+
+                                        <td class="text-center">api.smoot.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">A100 ROW GmbH</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.171.26.20</td>
+
+                                        <td class="text-center">sq-device.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a02:f100::6</td>
+
+                                        <td class="text-center">gspe85-ssl.ls.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2001:888:2000:3d::525e:ea69</td>
+
+                                        <td class="text-center">cstat.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a41:e07::9</td>
+
+                                        <td class="text-center">p38-caldav.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:f4::17ca:e53a</td>
+
+                                        <td class="text-center">play.itunes.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                device-name <br>
+                                            
+                                                imei <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:f4::58dd:9093</td>
+
+                                        <td class="text-center">carrierbundle.itunes.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a41:e08::11</td>
+
+                                        <td class="text-center">p38-availability.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                connection-type <br>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.36.202.160</td>
+
+                                        <td class="text-center">p6-buy.itunes.apple.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                device-name <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">17.248.176.234</td>
+
+                                        <td class="text-center">p38-fmf.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Apple Inc.</td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                                device-name <br>
+                                            
+                                                e-mail <br>
+                                            
+                                                os-version <br>
+                                            
+                                                timezone <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a01:b740:a41:e06::5</td>
+
+                                        <td class="text-center">p38-fmfmobile.icloud.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                country <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">87.248.100.168</td>
+
+                                        <td class="text-center">apple-finance.query.yahoo.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center">Yahoo! Europe</td>
+
+                                        <td class="text-center">Yahoo Assets LLC</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:38e::2a1</td>
+
+                                        <td class="text-center">is1-ssl.mzstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:38e::2a1</td>
+
+                                        <td class="text-center">is3-ssl.mzstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:383::2a1</td>
+
+                                        <td class="text-center">is2-ssl.mzstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:393::2a1</td>
+
+                                        <td class="text-center">is5-ssl.mzstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>
+                                            
+                                                os-version <br>
+                                            
+                                        </td>
+
+                                        <td class="text-center">2a02:26f0:fe00:383::2a1</td>
+
+                                        <td class="text-center">is4-ssl.mzstatic.com</td>
+
+                                        <td class="text-center">
+                                            
+                                                https
+                                            
+                                        </td>
+
+                                        <td class="text-center">
+                                            
+                                                TLS_AES_256_GCM_SHA384
+                                            
+                                        </td>
+
+                                        <td class="text-center"></td>
+
+                                        <td class="text-center">Apple Inc.</td>
+                                    </tr>
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Sources</th>
+                                    <th class="text-center">IP Address</th>
+                                    <th class="text-center">Domain</th>
+                                    <th class="text-center">Schemes</th>
+                                    <th class="text-center">Cipher Suites</th>
+                                    <th class="text-center">Organization</th>
+                                    <th class="text-center">Domain Organization</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2018 University of Sydney.</strong> All rights
+            reserved.
+        </footer>
+    </div>
+ 
+    <!-- jQuery 3 -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- Morris.js charts -->
+    <script src="../static/js/raphael.min.js"></script>
+    <script src="../static/js/morris.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../static/js/jquery.sparkline.min.js"></script>
+    <!-- jvectormap -->
+    <script src="../static/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../static/js/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../static/js/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../static/js/moment.min.js"></script>
+    <script src="../static/js/daterangepicker.js"></script>
+    <!-- datepicker -->
+    <script src="../static/js/bootstrap-datepicker.min.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="../static/js/bootstrap3-wysihtml5.all.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../static/js/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../static/js/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../static/js/adminlte.min.js"></script>
+    <!-- DataTables -->
+    <script src="../static/js/jquery.dataTables.min.js"></script>
+    <script src="../static/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <!-- <script src="/static/js/dashboard.js"></script> -->
+    <!-- AdminLTE for demo purposes -->
+    <!-- <script src="/static/js/demo.js"></script> -->
+
+    
+    <script src="../static/js/export/jquery-1.12.4.js"></script>
+    <script src="../static/js/export/jquery.dataTables.min.js"></script>
+    <script src="../static/js/export/dataTables.buttons.min.js"></script>
+    <script src="../static/js/export/buttons.flash.min.js"></script>
+    <script src="../static/js/export/jszip.min.js"></script>
+    <script src="../static/js/export/pdfmake.min.js"></script>
+    <script src="../static/js/export/vfs_fonts.js"></script>
+    <script src="../static/js/export/buttons.html5.min.js"></script>
+    <script src="../static/js/export/buttons.print.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#leaks').DataTable({
+                'paging'      : false,
+                'lengthChange': true,
+                'searching'   : true,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'print',
+                    {
+                        extend: 'csv',
+                        title: 'com.kidslox.main-leaks'
+                    },
+                    {
+                        extend: 'pdf',
+                        title: 'com.kidslox.main-leaks'
+                    }
+                ]
+            })
+        });
+
+    </script>
+
+
+
+</body>
+</html>
