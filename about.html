@@ -117,12 +117,38 @@
             <div class="col-xs-12">
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h2 class="box-title">Research Project</h2>
+                        <h2 class="box-title">Research Project Summary</h2>
                     </div>
                     <div class="box-body">
                         <p>
 
-							TODO
+                            Children today are growing up in an immersive digital media culture, with nearly
+                            continuous interaction with mobile applications (apps), including via parents' online
+                            behaviours. Child digital engagement has extended to the realm of health, where apps target a
+                            range of health promotion and disease management foci. The perceived value of health apps
+                            has resulted in their endorsement by child health organizations and prescription by clinicians,
+                            often without a complete understanding of data privacy and security. It is known that app
+                            developers routinely transmit user data to third parties to enhance user experiences or
+                            monetize the app. Although the data sharing practices of these third parties are largely
+                            unexplored, adult health app research indicates that commercial entities may be the recipients
+                            of personal and health data. In the case of children, serious safety and privacy issues can arise
+                            if health information is used for data- driven health product and service advertising without
+                            clinician consultation. Further, data aggregators may identify child users and create digital
+                            health dossiers that eventually impact on education or employment in adulthood. It is
+                            therefore critical to characterize the data sharing practices of child health apps and examine
+                            the advertising impact of transmitted data. We conducted a cross-sectional study of top user-
+                            rated mobile apps labeled for children under 12 years available in the Apple App store in
+                            Australia, Canada, the United Kingdom, and the United States as of July 2022. We aimed to:
+                            (1) characterize their data sharing practices through analyzing their network traffic; (2)
+                            identify the third parties who received the information transmitted from these apps. Building
+                            off previously reported methods, we created a parent/child dummy profile and measured
+                            network traffic analysis during simulated app use to identify transmission of 21 pre-specified
+                            types of user data and its network destinations. For identified data recipients, we examined
+                            their websites to categorize data recipients' main activities. Our analyses will enable the    
+                            characterization of data being transmitted by child health apps, the entities receiving the data
+                            and their data sharing practices, and the resultant advertising (and potential health) impacts
+                            on children. This research will provide a crucially needed picture of the privacy risks to
+                            children associated with health app use.
                         </p>
                     </div>
                 </div>
@@ -133,44 +159,79 @@
             <div class="col-xs-12">
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h2 class="box-title">People</h2>
-                    </div>
-                    <div class="box-body">
-                        <ul>
-                            <li> 
-                                <a href="about.html">TODO</a> -  TODO 
-                            </li> 
-
-                            <!-- <li> -->
-                                <!-- <a href="http://www.quinngrundy.com/">Quinn Grundy</a> -  University of Toronto & University of Sydney -->
-                            <!-- </li> -->
-<!--  -->
-                            <!-- <li> -->
-                                <!-- <a href="https://conand.me">Andrea Continella</a> - Unversity of California, Santa Barbara -->
-                            <!-- </li> -->
-<!--  -->
-<!--  -->
-                            <!-- <li> -->
-                                <!-- <a href="https://ralphholz.science/">Ralph Holz</a> - University of Sydney -->
-                            <!-- </li> -->
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="dataset" class="row">
-            <div class="col-xs-12">
-                <div class="box box-solid">
-                    <div class="box-header with-border">
-                        <h2 class="box-title">Dataset</h2>
+                        <h2 class="box-title">Methods</h2>
                     </div>
                     <div class="box-body">
                         <p>
 
-							TODO
+                            This cross-sectional study is reported in accordance with the STROBE guideline (eTable 1) [1]. 
+                            We conducted a network traffic and security analysis [2] to examine the data sharing practices of children's apps
+                            and a content analysis to describe the third party data recipients. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h2 class="box-title">Sampling and eligibility</h2>
+                    </div>
+                    <div class="box-body">
+                        <p>
 
+                            We included apps that: (1) are labeled in the app store for use by a child aged 12 or under or their parents; 
+                            (2) are available for download in major English-speaking markets (Australia, Canada, United Kingdom (UK), US) through the Apple App Store; 
+                            (3) report collecting user data; and (4) require the user to input at least one piece of data. 
+                            We developed a crawling program that systematically searched the Australian, Canadian, UK, and US Apple App Stores and implemented it weekly
+                            from September 1 to September 28, 2021, using the keywords "kids," "kid," "children," and "child." 
+                            The crawling program returned a list of the top 100 user-rated apps for each country store, which we screened to determine eligibility, 
+                            classified by app store category, and ranked from highest to lowest user rating score. We sampled the top 5 scoring apps in each category.
+                            Using the app store metadata, we excluded all apps not available in English, not present in a top 100 list for the entire 4-week sampling period, 
+                            requiring payment for download, or not updated within the previous 6 months. We excluded duplicate apps with the same title, vendor, and logo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h2 class="box-title">Data collection and analysis</h2>
+                    </div>
+                    <div class="box-body">
+                        <p>
+
+                            Pediatric clinicians on the author team created a dummy user profile that included demographic data, developmental stages, and health conditions for a parent/child dyad (eTable 2). 
+                            Between February and July 2022, we downloaded apps to an iPhone 13 (iOS 14.5), and an iPhone XR (iOS 13.1.3) and used the mitmproxy tool [3] to expose and record all network (internet) HTTP(S) traffic. 
+                            We purchased any subscriptions required, and then ran each app by logging in, clicking available buttons, adjusting settings, and using the information from the dummy profiles to explore all offered functionalities. 
+                            For apps involving a parent and child, we used both iPhones to capture the network traffic for both user types. 
+                            We manually reviewed all network traffic to identify transmissions of 21 pre-specified data types (e.g., name, birthdate) and recorded the domain name and IP address of the destination. 
+                            We used Shodan.io, and ip2location.com to identify the geographical location of IP addresses, and the WHOIS public service to identify the recipient of the user data (termed "host").
+                            By examining the websites of entities associated with the IP address and domain name, we categorized hosts as "first party" (i.e., app developers, parent company, and freelance app developers who make apps on their behalf),
+                            "third party" (i.e., entity providing some type of service to the developer), or both. [4] 
+                            We further categorized third parties receiving user data as either "infrastructure" providers (i.e., provide services necessary for the app to function, including cloud services and content delivery networks)
+                            or analysis providers (i.e., collect and commercialize user data for the purposes of analytics, advertising, and/or engagement), which we considered higher risk in terms of privacy.
+                            We used descriptive statistics for analysis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h2 class="box-title">Ethics</h2>
+                    </div>
+                    <div class="box-body">
+                        <p>
+                            This study is exempt per the University of Toronto Health Research Ethics Board. 
                         </p>
                     </div>
                 </div>
@@ -268,6 +329,68 @@
                             <dd>Timezone in which the device is located (e.g., GMT+11).</dd>
 
                         </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h2 class="box-title">People</h2>
+                    </div>
+                    <div class="box-body">
+                        <ul>
+                            <li> 
+                                <a href="#" target="_blank">Jessica Pimienta</a> - University of Toronto
+                            </li> 
+
+                            <li> 
+                                <a href="https://people.utwente.nl/j.h.brandt" target="_blank">Jacco Brandt</a> - University of Twente
+                            </li> 
+
+                            <li> 
+                                <a href="#" target="_blank">Timme Bethe</a> - University of Twente
+                            </li> 
+
+                            <li> 
+                                <a href="https://ralphholz.science/" target="_blank">Ralph Holz</a> - University of Twente
+                            </li> 
+
+                            <li> 
+                                <a href="https://conand.me" target="_blank">Andrea Continella</a> - University of Twente
+                            </li> 
+
+                            <li> 
+                                <a href="https://www.sickkids.ca/en/staff/j/lindsay-jibb/" target="_blank">Lindsay Jibb</a> -  University of Toronto and Hospital for Sick Children
+                            </li> 
+
+                            <li> 
+                                <a href="https://www.quinngrundy.com/" target="_blank">Quinn Grundy</a> -  University of Toronto
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h2 class="box-title">References </h2>
+                    </div>
+                    <div class="box-body">
+                        <p>
+                            [1] von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP. The strengthening the reporting of observational studies in epidemiology (strobe) statement: Guidelines for reporting observational studies. Journal of Clinical Epidemiology. 2008;61(4):344-349. doi:10.1016/j.jclinepi.2007.11.008
+                        </p><p>
+                            [2] Continella A, Fratantonio Y, Lindorfer M, et al. Obfuscation-resilient privacy leak detection for mobile apps through differential analysis. In: Proceedings 2017 Network and Distributed System Security Symposium. Internet Society; 2017. doi:10.14722/ndss.2017.23465
+                        </p><p>
+                            [3] mitmproxy. mitmproxy. Published online 2022. Accessed March 2, 2023. https://mitmproxy.org/
+                        </p><p>
+                            [4] Grundy Q, Chiu K, Held F, Continella A, Bero L, Holz R. Data sharing practices of medicines related apps and the mobile ecosystem: Traffic, content, and network analysis. BMJ. Published online March 20, 2019:l920. doi:10.1136/bmj.l920                        </p>
                     </div>
                 </div>
             </div>
